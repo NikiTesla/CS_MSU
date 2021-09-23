@@ -27,7 +27,7 @@ def solution(x, y):
 def solutions(x, y):
     list = []
     for i in range(len(y) - 1):
-        if y[i] > - 0.005 and y[i] < 0.005:
+        if y[i] > - eps / 2 and y[i] < eps / 2:
             list.append(x[i]) 
 
     return list
@@ -38,9 +38,6 @@ eps = 0.01
 
 x = np.arange(a, b, eps)
 y = np.cos(x)
-
-plt.plot(x, y, '-r')
-plt.show()
 
 print(solution(x, y))
 print(solutions(x, y))
