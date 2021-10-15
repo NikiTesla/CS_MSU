@@ -1,11 +1,13 @@
-# %%
+from matplotlib import pyplot as mp
 import numpy as np
-import matplotlib.pyplot as plt
 
-x = np.arange(- 2 * np.pi,2 * np.pi,  np.pi/10)
-y = np.sin(x)
+def gaussian(x, mu, sig):
+    return np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))
 
-print(y)
-plt.plot(x, y,  '-r')
-plt.show()  
-# %%
+mu = 4
+sig = 1
+
+x_values = np.linspace(-3, 3, 120)
+mp.plot(x_values, gaussian(x_values, mu, sig))
+
+mp.show()

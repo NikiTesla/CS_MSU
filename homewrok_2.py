@@ -37,7 +37,7 @@ a, b = float(input("Enter a: ")), float(input("Enter b: "))
 eps = 0.01
 
 x = np.arange(a, b, eps)
-y = np.cos(x)
+y = np.sin(x)
 
 print(solution(x, y))
 print(solutions(x, y))
