@@ -49,7 +49,9 @@ def den(X):
 def graph(X,A,B,M,S):
     m=middle(X)
     d=sigma(X)
+
     fig=plt.figure()
+    
     plt.axis([A,B,0,M+3])
     plt.xlabel("k",fontsize=20)
     plt.ylabel(r"$n_k$",fontsize=20)

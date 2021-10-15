@@ -35,11 +35,8 @@ print(first, second)
 first_count = np.zeros(100)
 second_count = np.zeros(100)
 
-for i  in first:
-    first_count[i] += 1
-for j in second:
-    second_count[j] += 1
-
+dict1 = {i:first.count(i) for i in range(min(first),max(first))+1)}
+dict2 = {i:second.count(i) for i in range(min(second),max(second)+1)}
 sum_a, sum_b = 0, 0
 
 for i in range(len(first_count)):
